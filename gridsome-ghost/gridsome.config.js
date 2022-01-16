@@ -12,9 +12,18 @@ module.exports = {
     Post: '/:title',
     Tag: '/tag/:id'
   },
-
+//testsitev3.pages.dev
   plugins: [
     {
+      use: '@gridsome/source-ghost',
+      options: {
+        baseUrl: 'https://testsitev3.pages.dev',
+        contentKey: '22444f78447824223cefc48062',
+        routes: {
+          post: '/:slug',
+          page: '/:slug'
+        }
+      },
       // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
